@@ -1,1 +1,1 @@
-# 01.MDS_Lesson1_JumpingBall
+# MDS Course Lessons
