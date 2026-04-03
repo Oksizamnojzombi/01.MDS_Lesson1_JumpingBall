@@ -6,20 +6,34 @@
     <title>Rive Hello World</title>
   </head>
   <body>
-    <canvas id="canvas" width="500" height="500"></canvas>
+    <canvas id="canvas1" width="500" height="500"></canvas>
+
+    <canvas id="canvas2" width="500" height="500"></canvas>
 
     <script src="https://unpkg.com/@rive-app/canvas"></script>
     <script src="https://unpkg.com/@rive-app/canvas@2.36.0"></script>
     <script>
       const r = new rive.Rive({
         src: "01.mds_lesson_01_jumping_ball.riv",
-        canvas: document.getElementById("canvas"),
+        canvas: document.getElementById("canvas1"),
         autoplay: true,
         // artboard: "Arboard", // Optional. If not supplied the default is selected
         stateMachines: "Jumping_Ball",
         onLoad: () => {
           // Ensure the drawing surface matches the canvas size and device pixel ratio
           r.resizeDrawingSurfaceToCanvas();
+        },
+      });
+
+      const r2 = new rive.Rive({
+        src: "02.mds_lesson02_waterbubble.riv",
+        canvas: document.getElementById("canvas2"),
+        autoplay: true,
+        // artboard: "Arboard", // Optional. If not supplied the default is selected
+        stateMachines: "BubleStateMashine",
+        onLoad: () => {
+          // Ensure the drawing surface matches the canvas size and device pixel ratio
+          r2.resizeDrawingSurfaceToCanvas();
         },
       });
     </script>
