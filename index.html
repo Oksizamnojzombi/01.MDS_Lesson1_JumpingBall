@@ -27,6 +27,11 @@
             tools, and workflow in Rive. I applied the basic techniques 
             in a hands-on project to understand the fundamentals of working with Rive and build a solid foundation in motion design!
           </p>
+          <p class="lesson-tooltip">
+            Hover over the bird, and it will change direction based on the cursor's position; </br>
+            Click on the ball, and it will change its skin; </br>
+            Click on the floor, and the ladder will turn into a road 
+          </p>
         </div>
 
         <div class="lesson-canvas">
@@ -47,6 +52,10 @@
             In this lesson, I learned how to create realistic water effects. 
             I discovered how to incorporate sliders to improve user interaction, 
             and I applied these skills to simulate the natural, dynamic movement of water.
+          </p>
+          <p class="lesson-tooltip">
+            Hover your cursor over the ball and click on it.</br>
+            Experiment with the ball's size and speed using the sliders.
           </p>
         </div>
 
@@ -69,6 +78,9 @@
             I refined the animation controls, learned techniques for smooth transitions between 
             states to create seamless movements, and learned how to create more complex and realistic character movements.
           </p>
+          <p class="lesson-tooltip">
+            Use the slider and experiment with the amplitude. 
+          </p>
         </div>
 
         <div class="lesson-canvas">
@@ -78,7 +90,30 @@
             </div>
           </div>
         </div>
+      </div>
 
+      <div class="lesson-card sunny-rock">
+        <div class="lesson-info">
+          <p class="lesson-number">Lesson 04</p>
+          <h2 class="lesson-title">Sunny Rock</h2>
+          <p class="lesson-description">
+            In this lesson, I learned more about advanced customization and personalization options, rigged a character, 
+            and studied mixing techniques in Rive to create diverse and unique animations with a professional look.
+          </p>
+          <p class="lesson-tooltip">
+            Make the Sunny dance rock. </br>
+            Hover your cursor over it and click. </br>
+            Experiment with the Sunny's size and amplitude using the sliders.
+          </p>
+        </div>
+
+        <div class="lesson-canvas">
+          <div class="canvas-shell">
+            <div class="canvas-inner">
+              <canvas id="canvas4" width="500" height="700"></canvas>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -170,12 +205,22 @@
         src: "03.Lesson_03/Final_Result/03.mds_lesson03_bellymixing.riv",
         canvas: document.getElementById("canvas3"),
         autoplay: true,
-        // artboard: "Arboard", // Optional. If not supplied the default is selected
         stateMachines: "Belly_SatetMashine",
         onLoad: () => {
-          // Ensure the drawing surface matches the canvas size and device pixel ratio
           r3.resizeDrawingSurfaceToCanvas();
         },
+        
+      });
+
+      const r4 = new rive.Rive({
+        src: "04.Lesson_04/Final_Result/04.mds_lesson04_sunnyrock.riv",
+        canvas: document.getElementById("canvas4"),
+        autoplay: true,
+        stateMachines: "RockSunnyStateMashine",
+        onLoad: () => {
+          r4.resizeDrawingSurfaceToCanvas();
+        },
+        
       });
     </script>
 
