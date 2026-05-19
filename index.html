@@ -116,6 +116,31 @@
         </div>
       </div>
 
+      <div class="lesson-card artist-parallax">
+        <div class="lesson-info">
+          <p class="lesson-number">Lesson 05</p>
+          <h2 class="lesson-title">Artist Parallax</h2>
+          <p class="lesson-description">
+            In this lesson, I created an animation of multi-layered parallax scenes. 
+            I learned how to create cursor-tracking particles using nested artboards, 
+            adding depth and interactivity to my animations to create a more realistic effect. 
+          </p>
+          <p class="lesson-tooltip">
+            Try changing the artist’s drawing style,</br> 
+            drag the elements that change with your cursor, </br>
+            and try clicking on his head. 
+          </p>
+        </div>
+
+        <div class="lesson-canvas">
+          <div class="canvas-shell">
+            <div class="canvas-inner">
+              <canvas id="canvas5" width="750" height="500"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -219,6 +244,17 @@
         stateMachines: "RockSunnyStateMashine",
         onLoad: () => {
           r4.resizeDrawingSurfaceToCanvas();
+        },
+        
+      });
+
+      const r5 = new rive.Rive({
+        src: "05.Lesson_05/Final_Result/05.mds_lesson05_artistparallax.riv",
+        canvas: document.getElementById("canvas5"),
+        autoplay: true,
+        stateMachines: "Artist_StateMashineFinal",
+        onLoad: () => {
+          r5.resizeDrawingSurfaceToCanvas();
         },
         
       });
